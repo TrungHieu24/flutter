@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-/// Flutter code sample for [AnimatedAlign].
-
 void main() => runApp(const AnimatedAlignExampleApp());
 
 class AnimatedAlignExampleApp extends StatelessWidget {
@@ -18,20 +16,21 @@ class AnimatedAlignExampleApp extends StatelessWidget {
   }
 }
 
-class AnimatedAlignExample extends StatefulWidget {
+class AnimatedAlignExample extends StatefulWidget{
   const AnimatedAlignExample({super.key});
 
   @override
-  State<AnimatedAlignExample> createState() => _AnimatedAlignExampleState();
+  State<AnimatedAlignExample> createState() => _AnimatedAlignExampleState(); 
+    // TODO: implement createState
+   
 }
-
-class _AnimatedAlignExampleState extends State<AnimatedAlignExample> {
+class _AnimatedAlignExampleState extends State<AnimatedAlignExample>{
   bool selected = false;
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {
+      onTap: (){
         setState(() {
           selected = !selected;
         });
@@ -42,11 +41,11 @@ class _AnimatedAlignExampleState extends State<AnimatedAlignExample> {
           height: 250.0,
           color: Colors.red,
           child: AnimatedAlign(
-            alignment: selected ? Alignment.topRight : Alignment.bottomLeft,
+            alignment: selected ? Alignment.topRight : Alignment.bottomLeft, 
             duration: const Duration(seconds: 1),
             curve: Curves.fastOutSlowIn,
-            child: const FlutterLogo(size: 50.0),
-          ),
+            child: const FlutterLogo(size: 50.0,),
+            ),
         ),
       ),
     );
